@@ -1,0 +1,52 @@
+.backend-logo {
+    width: 100%;
+    height: 100%;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        max-height: rem(160);
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
+.backend-adresse {
+    height: rem(160);
+    border: 1px inset var(--bs-dark);
+    padding: 0 rem(12);
+
+    address {
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+.btn-custom {
+    width: rem(200);
+}
+
+.backend-distance {
+    height: rem(37.05);
+}
+
+@include media-breakpoint-down(lg) {
+    .backend-logo {
+        img {
+            height: 60px;
+        }
+    }
+
+    .backend-adresse {
+        height: 100%;
+        font-size: 12px;
+
+        address {
+            font-size: 14px;
+        }
+    }
+
+    .backend-distance {
+        display: none;
+    }
+}
