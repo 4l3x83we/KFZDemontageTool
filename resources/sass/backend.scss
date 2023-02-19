@@ -14,5 +14,10 @@ $fa-font-path: '~fa/../webfonts';
 @import '~fa/regular.scss';
 @import '~fa/brands.scss';
 
+// DataTables
+@import '@/datatables.net-bs5/css/dataTables.bootstrap5.min.css';
+
+@import "components/root";
+
 // Custom Styles
 @import 'custom/backendCustom';

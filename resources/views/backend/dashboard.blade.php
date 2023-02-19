@@ -6,7 +6,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-8 my-2">
-            <div class="bg-white text-center backend-logo shadow-lg">
+            <div class="text-center backend-logo shadow-lg">
                 <img src="{{ Vite::image('logo_3.png') }}" alt="logo">
             </div>
         </div>

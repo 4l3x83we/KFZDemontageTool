@@ -2,10 +2,10 @@
 /**
  * Copyright (c) Alexander Guthmann.
  *
- * File: 2023_02_08_080803_create_fahrzeugdatens_table.php
+ * File: 2023_02_14_102155_create_fzklasse_table.php
  * User: ${USER}
- * Date: 8.${MONTH_NAME_FULL}.2023
- * Time: 8:8
+ * Date: 14.${MONTH_NAME_FULL}.2023
+ * Time: 10:21
  */
 
 use Illuminate\Database\Migrations\Migration;
@@ -15,10 +15,11 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
     public function up()
     {
-        Schema::create('fahrzeugdatens', function (Blueprint $table) {
+        Schema::create('fzklasse', function (Blueprint $table) {
             $table->id();
 
-
+            $table->unsignedBigInteger('fzk_id')->nullable();
+            $table->string('fzk_name')->nullable();
 
             $table->timestamps();
         });
@@ -26,6 +27,6 @@ return new class extends Migration {
 
     public function down()
     {
-        Schema::dropIfExists('fahrzeugdatens');
+        Schema::dropIfExists('fzklasse');
     }
 };

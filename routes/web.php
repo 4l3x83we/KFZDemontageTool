@@ -21,3 +21,9 @@ Route::get('/', [\App\Http\Controllers\Backend\DashboardController::class, 'inde
 Route::get('/account', [\App\Http\Controllers\indexController::class, 'account'])->name('frontend.account');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/suche/{fahrzeugdaten}/modell', [\App\Http\Controllers\SearchController::class, 'getModell']);
+
+// PWA
+Route::get('/offline', [\App\Http\Controllers\LaravelPWA::class, 'offline']);
+
+

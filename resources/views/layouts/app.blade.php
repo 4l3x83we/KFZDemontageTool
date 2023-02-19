@@ -15,6 +15,8 @@
 
     <!-- Scripts -->
     @vite(['resources/js/app.js'])
+    @stack('css')
+    @laravelPWA
 </head>
 <body class="d-flex flex-column">
     @include('layouts.partials.frontend.header')
@@ -22,5 +24,7 @@
     @yield('content')
 
     @include('layouts.partials.frontend.footer')
+    @stack('js')
+    @stack('script')
 </body>
 </html>

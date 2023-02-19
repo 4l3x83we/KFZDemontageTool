@@ -1,0 +1,14 @@
+:root {
+    @each $color, $value in $custom-theme-colors {
+        --#{$prefix}#{$color}: #{$value};
+    }
+
+    @each $color, $value in $all-colors {
+        --#{$prefix}#{$color}: #{$value};
+    }
+
+    --#{$prefix}white-rgb: #{to-rgb($white)};
+    --#{$prefix}black-rgb: #{to-rgb($black)};
+    --#{$prefix}body-color-rgb: #{to-rgb($body-color)};
+    --#{$prefix}body-bg-rgb: #{to-rgb($body-bg)};
+}

@@ -15,10 +15,27 @@
 
     <!-- Scripts -->
     @vite(['resources/js/backend.js'])
+    @stack('css')
+    @laravelPWA
 </head>
-<body class="bg-secondary">
-    @include('layouts.partials.backend.header')
+<body>
+    <div class="main-container d-flex">
+        @include('layouts.partials.backend.header')
 
-    @yield('content')
+        <div class="content">
+            <!-- Navbar Start -->
+                @include('layouts.partials.backend.navbar')
+            <!-- Navbar End -->
+            <!-- Messages Start -->
+                @include('helpers.message')
+            <!-- Messages End -->
+            <!-- Content Start -->
+                @yield('content')
+            <!-- Content End -->
+        </div>
+
+    </div>
+    @stack('js')
+    @stack('script')
 </body>
 </html>

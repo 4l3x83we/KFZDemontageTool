@@ -5,6 +5,9 @@ import $ from 'jquery';
 window.$ = $;
 window.jQuery = $;
 
+import DataTable from 'datatables.net-bs5';
+window.DataTable = DataTable;
+
 import 'bootstrap';
 
 /**
