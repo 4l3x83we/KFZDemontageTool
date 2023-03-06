@@ -22,6 +22,8 @@ Route::get('/account', [\App\Http\Controllers\indexController::class, 'account']
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/suche/{fahrzeugdaten}/modell', [\App\Http\Controllers\SearchController::class, 'getModell']);
+Route::get('/suche/{fahrzeugdaten}/fahrzeuges', [\App\Http\Controllers\SearchController::class, 'getFahrzeuges']);
+Route::get('/suche/{kunden}/kunden', [\App\Http\Controllers\SearchController::class, 'getKundens']);
 
 // PWA
 Route::get('/offline', [\App\Http\Controllers\LaravelPWA::class, 'offline']);

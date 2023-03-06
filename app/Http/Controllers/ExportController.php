@@ -10,6 +10,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\ExportAngebote;
 use App\Exports\ExportFahrzeuge;
 use App\Exports\ExportKunden;
 use Maatwebsite\Excel\Excel;
@@ -24,5 +25,10 @@ class ExportController extends Controller
     public function exportKundenCSVFile()
     {
         return (new ExportKunden)->download('kunden.csv', Excel::CSV);
+    }
+
+    public function exportAngeboteCSVFile()
+    {
+        return (new ExportAngebote)->download('angebote.csv', Excel::CSV);
     }
 }

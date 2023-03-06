@@ -1,5 +1,5 @@
 <div class="d-flex align-items-center py-3">
-    <a href="{{ route('backend.kunden.create') }}" class="btn btn-success btn-sm"><em class="fa-solid fa-plus pe-2"></em> Kunde hinzufügen</>
+    <a href="{{ route('backend.kunden.create') }}" class="btn btn-success btn-sm"><em class="fa-solid fa-plus pe-2"></em> Kunde hinzufügen</a>
     <a href="{{ route('backend.kunden.export-kunden-csvfile') }}" class="btn btn-secondary btn-sm ms-3"><em class="fa-solid fa-download pe-2"></em> Exportieren</a>
     <span class="ms-3">@if(count($kundens) == 1) {{ count($kundens) }} Kunde @else {{ count($kundens) }} Kunden @endif</span>
 </div>

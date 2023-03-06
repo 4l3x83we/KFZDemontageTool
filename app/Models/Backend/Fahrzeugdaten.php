@@ -63,4 +63,9 @@ class Fahrzeugdaten extends Model
 
         return $motorkategorie;
     }
+
+    public function angebote()
+    {
+        return $this->hasMany(Angebote::class, 'an_fahrzeug_id');
+    }
 }

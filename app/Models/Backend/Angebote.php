@@ -15,4 +15,14 @@ use Illuminate\Database\Eloquent\Model;
 class Angebote extends Model
 {
     protected $table = 'angebotes';
+
+    public function kunden()
+    {
+        return $this->belongsTo(Kunden::class, 'id');
+    }
+
+    public function fahrzeuge()
+    {
+        return $this->belongsTo(Fahrzeugdaten::class, 'id');
+    }
 }

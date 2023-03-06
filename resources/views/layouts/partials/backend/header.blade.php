@@ -19,11 +19,11 @@
                 <em class="fa-solid fa-car"></em> Fahrzeuge
             </a>
         </li>
-        <li class="side-one my-2 {{ Request::is('/backend/kalender') ? 'active' : '' }}">
+        {{--<li class="side-one my-2 {{ Request::is('/backend/kalender') ? 'active' : '' }}">
             <a href="{{ route('dashboard') }}" class="text-decoration-none px-3 py-2 d-block">
                 <em class="fa-solid fa-calendar-days"></em> Kalender
             </a>
-        </li>
+        </li>--}}
         <li class="side-one my-2 {{ Request::is('/backend/angebote') ? 'active' : '' }}">
             <a href="{{ route('backend.angebote.index') }}" class="text-decoration-none px-3 py-2 d-block">
                 <em class="fa-solid fa-hand-holding"></em> Angebote

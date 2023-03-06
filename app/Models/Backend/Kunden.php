@@ -34,4 +34,9 @@ class Kunden extends Model
         'kd_zusatzinfo',
         'kd_zusatzinfo_check',
     ];
+
+    public function angebote()
+    {
+        return $this->hasMany(Angebote::class, 'an_kunden_id');
+    }
 }

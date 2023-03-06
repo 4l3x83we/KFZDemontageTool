@@ -11,6 +11,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Backend\Admin\Modell;
+use App\Models\Backend\Fahrzeugdaten;
+use App\Models\Backend\Kunden;
 
 class SearchController extends Controller
 {
@@ -20,5 +22,21 @@ class SearchController extends Controller
             $modells = Modell::where('hersteller_name', '=', $fahrzeugdaten)->select('modell_name')->distinct()->get();
         }
         return response()->json($modells);
+    }
+
+    public function getFahrzeuges($fahrzeugdaten)
+    {
+        if ($fahrzeugdaten != '') {
+            $fahrzeuges = Fahrzeugdaten::where('id', '=', $fahrzeugdaten)->distinct()->get();
+        }
+        return response()->json($fahrzeuges);
+    }
+
+    public function getKundens($kunden)
+    {
+        if ($kunden != '') {
+            $kundens = Kunden::where('id', '=', $kunden)->distinct()->get();
+        }
+        return response()->json($kundens);
     }
 }

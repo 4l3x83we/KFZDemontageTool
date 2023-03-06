@@ -25,6 +25,7 @@ Route::resource('angebote', \App\Http\Controllers\Backend\AngebotesController::c
 Route::controller(\App\Http\Controllers\ExportController::class)->group(function () {
     Route::get('fahrzeugdaten/export/fahrzeugdaten', 'exportFahrzeugCSVFile')->name('fahrzeugdaten.export-fahrzeug-csvfile');
     Route::get('kunden/export/kunden', 'exportKundenCSVFile')->name('kunden.export-kunden-csvfile');
+    Route::get('angebote/export/angebote', 'exportAngeboteCSVFile')->name('angebote.export-angebote-csvfile');
 });
 
 // PWA
